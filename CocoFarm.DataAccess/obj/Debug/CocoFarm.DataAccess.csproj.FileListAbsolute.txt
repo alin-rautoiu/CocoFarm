@@ -1,0 +1,5 @@
+C:\Users\User\Downloads\ZeroHero-master\ZeroHero-master\CocoFarm\CocoFarm.DataAccess\bin\Debug\CocoFarm.DataAccess.dll
+C:\Users\User\Downloads\ZeroHero-master\ZeroHero-master\CocoFarm\CocoFarm.DataAccess\bin\Debug\CocoFarm.DataAccess.pdb
+C:\Users\User\Downloads\ZeroHero-master\ZeroHero-master\CocoFarm\CocoFarm.DataAccess\obj\Debug\CocoFarm.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\User\Downloads\ZeroHero-master\ZeroHero-master\CocoFarm\CocoFarm.DataAccess\obj\Debug\CocoFarm.DataAccess.dll
+C:\Users\User\Downloads\ZeroHero-master\ZeroHero-master\CocoFarm\CocoFarm.DataAccess\obj\Debug\CocoFarm.DataAccess.pdb

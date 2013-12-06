@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Edit";
+}
+@model CocoFarm.Models.Produs
+
+<h2>Editare produs</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <fieldset>        
+        <legend>@Html.DisplayNameFor(model => model.Denumire)</legend>
+        @Html.Partial("ProdusEditors")
+        <p>
+            <input type="submit" value="Salvează" />
+        </p>
+    </fieldset>
+}
