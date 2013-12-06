@@ -1,0 +1,27 @@
+﻿@using System.Collections.Generic
+@{
+    ViewBag.Title = "AdaugaProprietateGenerala";
+    IEnumerable<CocoFarm.Models.Proprietate> proprietati = (IEnumerable<CocoFarm.Models.Proprietate>)ViewData["proprietati"];
+}
+
+@model  CocoFarm.Models.Proprietate
+
+<h2>Adauga Proprietate Generala</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(model => model.Nume)
+        @Html.EditorFor(model => model.Nume)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Descriere)
+        @Html.EditorFor(model => model.Descriere)
+    </div>
+
+    <input type="submit" value="Adaugă" />
+}
+<p>
+    @Html.ActionLink("Înapoi în listă de produse", "Index")
+</p>

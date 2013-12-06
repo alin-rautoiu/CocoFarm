@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Edit";
+}
+@model CocoFarm.Models.Produs
+
+<h2>Editare produs</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <fieldset>        
+        <legend>@Html.DisplayNameFor(model => model.Denumire)</legend>
+        @Html.Partial("ProdusEditors")
+        <p>
+            <input type="submit" value="Salvează" />
+        </p>
+
+        <p> Acestea sunt proprietatile produsului</p>
+        @foreach (CocoFarm.Models.ProprietateValoare propVal in Model.Proprietati)
+        {
+            <p>
+                @Html.DisplayFor(val => propVal.Proprietate.Nume)
+            </p>
+        }
+        @Html.ActionLink("Adauga o proprietate", "AdaugaProprietati");
+    </fieldset>
+}

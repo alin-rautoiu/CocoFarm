@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "ProdusDisplay";
+}
+
+@model CocoFarm.Models.Produs
+
+    <div>
+        @Html.LabelFor(model => model.Denumire)
+        @Html.DisplayFor(model => model.Denumire)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Cod)
+        @Html.DisplayFor(model => model.Cod)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Descriere)
+        @Html.DisplayFor(model => model.Descriere)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Pret)
+        @Html.DisplayFor(model => model.Pret)
+    </div>

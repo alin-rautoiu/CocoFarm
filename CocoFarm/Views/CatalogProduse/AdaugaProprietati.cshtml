@@ -1,0 +1,36 @@
+﻿@using System.Collections.Generic
+@{
+    ViewBag.Title = "AdaugaProprietati";
+    IEnumerable<CocoFarm.Models.Proprietate> proprietati = (IEnumerable<CocoFarm.Models.Proprietate>)ViewData["proprietati"];
+    IEnumerable<SelectListItem> selectItems;
+    if (proprietati != null)
+    { selectItems = proprietati.Select(p => new SelectListItem() { Value = p.Id.ToString(), Text = p.Nume }); }
+    else
+    { selectItems = new List<SelectListItem>(); }
+}
+
+@model CocoFarm.Models.ProprietateValoare
+
+<h2>Adauga Proprietati pentru produsul @(Html.DisplayFor(produs => produs.Proprietate.Nume))</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>Proprietate Noua</legend>
+
+        @Html.DropDownListFor(model => model.Proprietate, selectItems)
+
+        <div>
+            @Html.LabelFor(model => model.Valoare)
+            @Html.EditorFor(model => model.Valoare)
+        </div>
+
+    </fieldset>
+    <input type="submit" value="Adaugă" />
+}
+
+<p>
+    @Html.ActionLink("Înapoi în listă de produse", "Index")
+    @*@Html.ActionLink("Înapoi la editarea produsului", "Editare", new {Id = @Model.ProdusId })*@
+</p>
