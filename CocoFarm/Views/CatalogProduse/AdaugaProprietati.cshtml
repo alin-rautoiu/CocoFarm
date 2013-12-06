@@ -19,8 +19,7 @@
     <fieldset>
         <legend>Proprietate Noua</legend>
 
-        @Html.DropDownListFor(model => model.Proprietate, selectItems)
-
+        @Html.DropDownListFor(model => model.Proprietate.Nume, selectItems)
         <div>
             @Html.LabelFor(model => model.Valoare)
             @Html.EditorFor(model => model.Valoare)
@@ -32,5 +31,4 @@
 
 <p>
     @Html.ActionLink("Înapoi în listă de produse", "Index")
-    @*@Html.ActionLink("Înapoi la editarea produsului", "Editare", new {Id = @Model.ProdusId })*@
 </p>

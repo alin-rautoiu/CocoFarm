@@ -102,10 +102,10 @@ namespace CocoFarm.Controllers
         {
             try
             {
-                var produs = store.GetById(propVal.ProdusId);
+                /*var produs = store.GetById(propVal.ProdusId);
                 produs.Proprietati.Add(propVal);
-                store.Update(produs);
-                //store.GetById(propVal.ProdusId).Proprietati.Add(propVal);
+                store.Update(produs);*/
+                store.GetById(propVal.ProdusId).Proprietati.Add(propVal);
                 return RedirectToAction("Index");
             }
             catch
